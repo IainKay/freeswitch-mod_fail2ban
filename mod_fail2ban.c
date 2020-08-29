@@ -10,7 +10,7 @@ SWITCH_MODULE_LOAD_FUNCTION(mod_fail2ban_load);
 SWITCH_MODULE_DEFINITION(mod_fail2ban, mod_fail2ban_load, mod_fail2ban_shutdown, NULL);
 
 switch_memory_pool_t *modpool;
-char *logfile_name = "/usr/local/freeswitch/log/fail2ban.log";
+char *logfile_name = "/var/log/freeswitch/fail2ban.log";
 switch_file_t *logfile;
 switch_event_types_t event = SWITCH_EVENT_CUSTOM;
 const char *subclass_name = SWITCH_EVENT_SUBCLASS_ANY;
