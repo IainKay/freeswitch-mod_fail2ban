@@ -3,11 +3,11 @@ FreeSWITCH module for fail2ban
 
 ## Installing the module
 
-`cd /usr/local/src/freeswitch/src/mod/applications`
+`cd /usr/local/src`
 
-`git clone https://github.com/kurtabersold/freeswitch-mod_fail2ban.git mod_fail2ban`
+`git clone https://github.com/IainKay/freeswitch-mod_fail2ban.git freeswitch-mod_fail2ban`
 
-`cd mod_fail2ban`
+`cd freeswitch-mod_fail2ban`
 
 `make && make install`
 
@@ -16,9 +16,9 @@ FreeSWITCH module for fail2ban
 
 ### Freeswitch
 
-copy `fail2ban.conf.xml` to `/usr/local/conf/autoload_configs/`
+copy `fail2ban.conf.xml` to `/etc/freeswitch/autoload_configs/`
 
-By default, mod_fail2ban will log to `/usr/local/freeswitch/log/fail2ban.log`
+By default, mod_fail2ban will log to `/var/log/freeswitch/fail2ban.log`
 
 If you need to change this, edit `fail2ban.conf.xml`
 
@@ -55,7 +55,7 @@ In `fs_cli` type `load mod_fail2ban`
 
 ### Automatically
 
-Add `<load module="mod_fail2ban"/>` to `/usr/local/conf/autoload_configs/modules.conf.xml`
+Add `<load module="mod_fail2ban"/>` to `/etc/freeswitch/autoload_configs/modules.conf.xml`
 
 Reload configuration
 
@@ -78,7 +78,7 @@ An example of how we can test the regex on the command line
 
 ### mod_fail2ban
 
-`tail /usr/local/freeswitch/log/fail2ban.log`
+`tail /var/log/freeswitch/fail2ban.log`
 ```
 2016-08-10T17:57:54-0400 A registration was attempted User:1001 IP:50.149.72.66
 2016-08-10T17:57:54-0400 A registration failed User:1001 IP:50.149.72.66
