@@ -1,6 +1,8 @@
 # mod_fail2ban
 FreeSWITCH module for fail2ban
 
+This is the latest code that I could find, based upon kurtabersold/freeswitch-mod_fail2ban, modified to use binary installed freeswitch paths (i.e. no /usr/local/freeswitch).
+
 ## Installing the module
 
 `cd /usr/local/src`
